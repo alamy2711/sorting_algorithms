@@ -21,13 +21,11 @@ void selection_sort(int *array, size_t size)
 		{
 			if (array[j] < array[current_min])
 			{
-				current_min = j;
+				temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
 			}
 		}
-
-		temp = array[i];
-		array[i] = array[current_min];
-		array[current_min] = temp;
 
 		print_array(array, size);
 	}
